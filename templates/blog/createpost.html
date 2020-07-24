@@ -1,0 +1,23 @@
+{% extends 'shared/base.html' %}
+
+{% block pagetitle %}
+  Blog | 
+{% endblock pagetitle %}
+
+{% block contentarea %}
+ <section class="bloglist">
+   <div class="container">
+    <h1>New Blog Post</h1>
+    
+    
+      
+    <form method="POST" action="{% url 'createpost' %}">
+      {% csrf_token %}
+      {{form.as_p}}
+      <button type="submit">Post Article</button>
+    </form>
+      
+   </div>
+ </section>
+
+{% endblock contentarea %}

@@ -1,0 +1,31 @@
+{% extends 'shared/base.html' %}
+
+{% block pagetitle %}
+  Welcome to Blog Mania
+{% endblock pagetitle %}
+
+{% block contentarea %}
+ <section class="bloglist">
+   <div class="container">
+    <h1>All Blog Posts</h1>
+    {% if messages %}
+      {% for item in messages %}
+        <p style="background-color: green;color:white;font-weight:bold;height:70px"> {{item}} 
+          
+        </p>
+      {% endfor %}
+    {% endif %}
+    {% for post in posts %}
+      <div>
+        <h3> {{post.title}} </h3>
+        <p>
+          {{post.body | safe}}
+        </p>
+        <a href="{% url 'postdetail' slug=post.slug %}">details here ...</a>
+      </div>
+    {% endfor %}
+      
+   </div>
+ </section>
+
+{% endblock contentarea %}

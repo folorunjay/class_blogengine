@@ -1,0 +1,18 @@
+{% extends 'shared/base.html' %}
+
+{% block pagetitle %}
+  Login
+{% endblock pagetitle %}
+
+{% block contentarea %}
+<section id="authlogin">
+  <div class="container">
+    <h1>L0gin</h1>
+    <form method="POST" action="{% url 'login' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</section>
+{% endblock contentarea %}

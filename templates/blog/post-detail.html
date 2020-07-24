@@ -1,0 +1,18 @@
+{% extends 'shared/base.html' %}
+
+{% block pagetitle %}
+  Blog | 
+{% endblock pagetitle %}
+
+{% block contentarea %}
+ <section class="bloglist">
+   <div class="container">
+    <h1>{{ post.title }} </h1>
+    <p>
+      {{ post.body | safe }}
+    </p>
+      
+   </div>
+ </section>
+
+{% endblock contentarea %}

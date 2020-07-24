@@ -1,0 +1,58 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.topbar {
+	padding-top: 20px;
+}
+.topbar .container {
+	width: 80%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 7fr;
+}
+
+.topbar .container ul {
+	justify-self: end;
+  display: inline-flex;
+  list-style: none;
+}
+.topbar .container ul li {
+
+}
+.topbar .container ul a {
+	padding: 0 12px;
+	text-decoration: none;
+}
+
+.bloglist{
+  padding: 30px 0 0;
+}
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.divbox{
+	width: 70%;
+	margin: 0 auto 100px;
+	background: lightskyblue;
+	height: 150px;
+	overflow: auto;
+ position: relative;
+}
+.divbox .div1{
+	background: red;
+	height: 125px;
+	width: 70%;
+	z-index: 3;
+	position: absolute;
+}
+.divbox .div2{
+	background: yellow;
+	height: 120px;
+	width: 70%;
+	z-index: 4;
+	position: absolute;
+}
